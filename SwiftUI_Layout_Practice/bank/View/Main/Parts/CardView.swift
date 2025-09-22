@@ -13,6 +13,8 @@ struct CardView: View {
             CardContent()
                 .background(LinearGradient(colors: [.cardTop, .cardBottom], startPoint: .top, endPoint: .bottom))
                 .clipShape(CardShape())
+            Image(.star).resizable().frame(width: 30,height: 30).offset(x: -100, y: -120).foregroundStyle(Color(hex:"c1ef00"))
+            Image(.star).resizable().frame(width: 16,height: 16).offset(x: -150, y: -70).foregroundStyle(Color(hex:"c1ef00")).opacity(0.2)
             AddButtonView()
         }
     }

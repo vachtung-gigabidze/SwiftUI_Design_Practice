@@ -5,6 +5,7 @@
 //  Created by Dmitrii Ziadik on 19.09.2025.
 //
 import SwiftUI
+
 struct Page1: View {
     var body: some View {
         ScrollView{
@@ -17,8 +18,9 @@ struct Page1: View {
                     Text("Smart Solution for Smart Money.").font(type: .medium, size: 45)
                     }.foregroundStyle(.white)
                     
-                  CardView()
+                    CardView()
                     QuickSendView()
+                    RecentActivityView()
                 }
             }
             .padding(.horizontal, 20)

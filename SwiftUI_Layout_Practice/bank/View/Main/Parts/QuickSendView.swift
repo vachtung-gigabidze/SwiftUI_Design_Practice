@@ -6,46 +6,25 @@
 //
 import SwiftUI
 
+
+
 struct QuickSendView: View {
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading, spacing: 15){
             HStack{
                 Text("Quick Send").font(type: .medium, size: 20).foregroundStyle(.white)
                 Spacer()
                 SeeAllView()
             }
             HStack() {
-                SenderView()
-                Spacer()
-                SenderView()
-                Spacer()
-                SenderView()
-                Spacer()
-                SenderView()
-                Spacer()
-                SenderView()
+                ForEach(User.mockData) { user in
+                    SenderView(user: user).frame(maxWidth: .infinity)
+                }
             }
         }
         .padding(20)
         .background(Color(hex: "2f352a"))
         .clipShape(RoundedRectangle(cornerRadius: 20))
-    }
-}
-
-struct SenderView: View {
-    var body: some View {
-        Button {
-            
-        } label: {
-            
-        VStack {
-            Image(.ava)
-                .resizable()
-                .frame(width: 50, height: 50)
-                .clipShape(.circle)
-            Text("Drake").font(type: .regular, size: 16).foregroundStyle(.white)
-        }
-        }
     }
 }
 
